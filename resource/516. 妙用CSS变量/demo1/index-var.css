@@ -1,0 +1,84 @@
+:root {
+  /* 按钮宽度 */
+  --button-width: 700px;
+  /* 按钮高度 */
+  --button-height: 295px;
+  /* 开关直径 */
+  --toggle-diameter: 255px;
+  /* 阴影偏移 */
+  --toggle-shadow-offset: 10px;
+  /* 开关拉伸宽度 */
+  --toggle-wider: 433px;
+  /* 开关关闭颜色 */
+  --color-grey: #e9e9e9;
+  /* 开关打开颜色 */
+  --color-green: #30d158;
+}
+label {
+  margin-top: -500px;
+}
+span {
+  display: inline-block;
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: var(--color-grey);
+  border-radius: calc(var(--button-height) / 2);
+  position: relative;
+  transition: 0.3s all ease-in-out;
+}
+
+span::after {
+  content: '';
+  display: inline-block;
+  width: var(--toggle-diameter);
+  height: var(--toggle-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle-diameter) / 2);
+  position: absolute;
+  top: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+  transform: translateX(
+    calc((var(--button-height) - var(--toggle-diameter)) / 2)
+  );
+  box-shadow: var(--toggle-shadow-offset) 0
+    calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+  transition: 0.3s all ease-in-out;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+input[type='checkbox']:checked + span {
+  background-color: var(--color-green);
+}
+
+input[type='checkbox']:checked + span::after {
+  transform: translateX(
+    calc(
+      var(--button-width) - var(--toggle-diameter) -
+        calc((var(--button-height) - var(--toggle-diameter)) / 2)
+    )
+  );
+  box-shadow: calc(var(--toggle-shadow-offset) * -1) 0
+    calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+input[type='checkbox']:active + span::after {
+  width: var(--toggle-wider);
+}
+
+input[type='checkbox']:checked:active + span::after {
+  transform: translateX(
+    calc(
+      var(--button-width) - var(--toggle-wider) -
+        calc((var(--button-height) - var(--toggle-diameter)) / 2)
+    )
+  );
+}

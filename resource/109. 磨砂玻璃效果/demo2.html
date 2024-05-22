@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: url(./demo2.jpeg) no-repeat center/cover;
+        height: 100vh;
+        margin: 0;
+      }
+      .modal {
+        position: fixed;
+        width: 100%;
+        right: 0;
+        height: 100%;
+        top: 0;
+        transition: 2s;
+        border-left: 5px solid #333;
+
+        backdrop-filter: grayscale(1);
+      }
+      body:hover .modal {
+        width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal"></div>
+  </body>
+</html>

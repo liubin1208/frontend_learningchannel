@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        background: linear-gradient(
+          90deg,
+          #9a109a 6%,
+          #d53567 25%,
+          #f14444 45%,
+          #ffa500 55%,
+          #ffff00 94%
+        );
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .wrap {
+        position: relative;
+      }
+
+      h1 {
+        font-family: Arial;
+        color: #fff;
+        font-size: 60px;
+        padding: 20px 30px;
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+        text-transform: uppercase;
+      }
+
+      .modal {
+        font-family: 'Roboto Mono';
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: absolute;
+        display: block;
+        margin: 0 auto;
+        width: 47%;
+        height: 150px;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3em;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.4);
+        /* filter: blur(3px); */
+        backdrop-filter: blur(3px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>磨砂玻璃效果</h1>
+      <div class="modal">Card</div>
+    </div>
+  </body>
+</html>

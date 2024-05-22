@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .circle {
+        /* border: 2px solid #000; */
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 0 auto;
+        background: conic-gradient(#f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+        position: relative;
+      }
+      .circle::before {
+        content: '';
+        position: absolute;
+        background: #fff;
+        inset: 5px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle"></div>
+  </body>
+</html>

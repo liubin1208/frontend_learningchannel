@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音乐列表</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="music-list">
+      <div class="music-item">
+        <span class="title">小蝌蚪找妈妈</span>
+        <i data-name="小蝌蚪找妈妈.oggl" class="iconfont i-24gf-play"></i>
+      </div>
+      <div class="music-item">
+        <span class="title">白龙马</span>
+        <i data-name="白龙马.oggl" class="iconfont i-24gf-play"></i>
+      </div>
+      <div class="music-item">
+        <span class="title">生日快乐</span>
+        <i data-name="生日快乐.oggl" class="iconfont i-24gf-play"></i>
+      </div>
+    </div>
+    <script src="./channel.js"></script>
+    <script>
+      const playBtns = document.querySelectorAll('i[data-name]');
+      const channel = createChannel('music');
+
+      for (const btn of playBtns) {
+        btn.onclick = (e) => {
+          if (channel.listeners.size === 0) {
+            window.open(`/music.html?name=${e.target.dataset.name}`, '_blank');
+          } else {
+            channel.postMessage({
+              musicName: e.target.dataset.name,
+            });
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

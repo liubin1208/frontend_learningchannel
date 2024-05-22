@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 320px;
+        aspect-ratio: 1332/744;
+        margin: 30px auto;
+        position: relative;
+      }
+      .video {
+        width: 100%;
+        height: 100%;
+        background: #fc5e56;
+        background: url(./video.png) left top/100% 100%;
+      }
+      .comment {
+        position: absolute;
+        inset: 0;
+        left: 0;
+        top: 0;
+        /* background: lightblue; */
+        color: #fff;
+        mask-image: url(./mask.svg);
+        mask-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="video"></div>
+      <div class="comment">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
+        dolores sequi corporis nisi dolor, sint quod dignissimos, neque ab animi
+        assumenda molestias perferendis enim nostrum veniam, magnam beatae
+        architecto necessitatibus!
+      </div>
+    </div>
+  </body>
+</html>

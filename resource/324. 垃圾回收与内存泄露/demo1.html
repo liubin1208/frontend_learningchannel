@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let users = [
+        { name: 'John', age: 34 },
+        { name: 'Amy', age: 20 },
+        { name: 'camperCat', age: 10 },
+      ];
+      const avgAge =
+        users.reduce((sum, user) => sum + user.age, 0) / users.length;
+      users = null;
+      console.log(avgAge);
+    </script>
+  </body>
+</html>

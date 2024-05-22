@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background: #171717;
+  padding-top: 100px;
+}
+.img-container {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.img-item {
+  box-shadow: inset 0 0 0 1px #fff;
+  transition: 0.5s;
+  background-size: 300px 300px;
+  background-image: url(../assets/test.png);
+  background-position: var(--bgX, 0) var(--bgY, 0);
+  transform: translate(var(--disX, 0), var(--disY, 0));
+  position: relative;
+}
+
+.img-container:hover .img-item {
+  transform: translate(0, 0);
+  box-shadow: inset 0 0 0 0 #fff;
+}

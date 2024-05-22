@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 300px;
+        height: 300px;
+        outline: 1px solid #000;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        animation: rotate linear infinite 20s;
+      }
+      .container .item {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+      }
+      .container img {
+        width: 100%;
+        height: 100%;
+        animation: rotate 20s linear infinite reverse;
+      }
+
+      @keyframes rotate {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <img src="./img/guide1.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="./img/guide2.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="./img/guide3.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="./img/guide4.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="./img/guide5.png" alt="" />
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

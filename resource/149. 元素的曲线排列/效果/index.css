@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #9e2850;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  font-family: 'Open Sans';
+  flex-direction: column;
+  row-gap: 130px;
+}
+.container {
+  font-weight: normal;
+  display: flex;
+  font-size: 2em;
+}

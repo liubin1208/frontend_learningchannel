@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F***</title>
+    <style>
+      .container {
+        position: relative;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .content {
+        background-color: lightgray;
+        padding-top: 0;
+        padding-bottom: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: padding-top 0.5s, padding-bottom 0.5s, visibility 0.5s,
+          opacity 0.5s;
+        overflow: hidden;
+      }
+
+      .button:hover + .content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="button">Hover me!</div>
+      <div class="content">
+        <p>这是一段隐藏的文本，当你将鼠标悬停在按钮上时，文本将逐渐显示。</p>
+      </div>
+    </div>
+  </body>
+</html>

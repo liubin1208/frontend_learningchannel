@@ -1,0 +1,19 @@
+/* :root {
+  --size: 250px;
+} */
+
+.container {
+  --size: 500px;
+  --gap: calc(var(--size) / 10);
+  width: var(--size);
+  height: var(--size);
+  background: #fb5d56;
+  padding: var(--gap);
+  margin: var(--gap);
+}
+
+.container .item {
+  width: calc(var(--size) / 2);
+  height: calc(var(--size) / 2);
+  background: #febc2e;
+}

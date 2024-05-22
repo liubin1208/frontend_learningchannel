@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  margin: 2em auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.column {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content img {
+  width: 100%;
+  box-shadow: 0 0 3px #0008;
+  border-radius: 5px;
+}

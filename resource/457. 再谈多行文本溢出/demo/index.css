@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  background: #eee;
+  width: 400px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+  word-break: break-all;
+}
+.text-container {
+  height: 100px;
+  overflow: hidden;
+}
+.content {
+  line-height: 25px;
+}
+.more {
+  float: right;
+  line-height: 1;
+}
+.text-container::before {
+  content: '';
+  display: block;
+  height: 80px;
+}
+.content {
+  margin-top: -80px;
+}

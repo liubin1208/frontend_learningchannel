@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.5em;
+  font-weight: bold;
+  font-family: 'Roboto Mono';
+}
+
+span {
+  color: #faebd7;
+  animation: colorChange 1s infinite ease-in-out alternate;
+}
+
+@keyframes colorChange {
+  to {
+    color: #ff0266;
+  }
+}
+
+@for $i from 1 through 8 {
+  span:nth-child(#{$i}) {
+    animation-delay: ($i - 1) * 0.2s;
+  }
+}

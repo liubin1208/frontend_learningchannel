@@ -1,0 +1,31 @@
+<mxfile host="65bd71144e">
+    <diagram id="pPe5dnJzzwuF5N3lSt5V" name="第 1 页">
+        <mxGraphModel dx="607" dy="445" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="a" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Roboto Mono;fontSize=17;" parent="1" vertex="1">
+                    <mxGeometry x="132" y="59" width="45" height="37" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="b" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Roboto Mono;fontSize=17;" parent="1" vertex="1">
+                    <mxGeometry x="177" y="59" width="45" height="37" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="a" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Roboto Mono;fontSize=17;" parent="1" vertex="1">
+                    <mxGeometry x="222" y="59" width="45" height="37" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="b" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Roboto Mono;fontSize=17;" parent="1" vertex="1">
+                    <mxGeometry x="267" y="59" width="45" height="37" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;div style=&quot;background-color: rgb(33 , 33 , 33) ; font-family: &amp;#34;roboto mono&amp;#34; , &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace , &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-weight: normal ; font-size: 18px ; line-height: 27px&quot;&gt;&lt;div style=&quot;color: rgb(238 , 255 , 255)&quot;&gt;&lt;span style=&quot;color: #eeffff&quot;&gt;arr&lt;/span&gt;&lt;span style=&quot;color: #89ddff&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #82aaff&quot;&gt;reduce&lt;/span&gt;&lt;span style=&quot;color: #eeffff&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c792ea&quot;&gt;function&lt;/span&gt;&lt;span style=&quot;color: #eeffff&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #89ddff&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #eeffff ; font-style: italic&quot;&gt;a&lt;/span&gt;&lt;span style=&quot;color: #89ddff&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;color: #eeffff&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #eeffff ; font-style: italic&quot;&gt;b&lt;/span&gt;&lt;span style=&quot;color: #89ddff&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #eeffff&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #89ddff&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #f07178&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(137 , 221 , 255) ; font-style: italic&quot;&gt;&amp;nbsp; &amp;nbsp;return&lt;/span&gt;&lt;span style=&quot;color: rgb(240 , 113 , 120)&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;font color=&quot;#eeffff&quot;&gt;&lt;i&gt;?&lt;/i&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(137 , 221 , 255)&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(137 , 221 , 255)&quot;&gt;},&lt;/span&gt;&lt;font color=&quot;#f78c6c&quot;&gt;&amp;nbsp;{}&lt;/font&gt;&lt;span style=&quot;color: rgb(238 , 255 , 255)&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: rgb(137 , 221 , 255)&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="52.003807983398445" y="163.00040435791016" width="322" height="95" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="{&lt;br&gt;&amp;nbsp; a:2&lt;br&gt;&amp;nbsp; b:2&lt;br&gt;}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Roboto Mono;fontSize=14;verticalAlign=top;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="214" y="93" width="80" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="b" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Roboto Mono;fontSize=17;" vertex="1" parent="1">
+                    <mxGeometry x="302" y="126" width="45" height="37" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

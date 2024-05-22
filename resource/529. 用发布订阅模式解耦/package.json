@@ -1,0 +1,9 @@
+{
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "ant-design-vue": "^4.1.2",
+    "axios": "^1.6.8",
+    "vue-router": "^4.3.0"
+  }
+}

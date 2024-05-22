@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音乐播放</title>
+    <style>
+      audio {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <audio controls></audio>
+    <script src="./channel.js"></script>
+    <script>
+      const audio = document.querySelector('audio');
+      audio.ondurationchange = () => {
+        audio.currentTime = 9;
+        audio.play();
+      };
+      function play(name) {
+        audio.src = `/music/${name}`;
+      }
+      function init() {
+        const url = new URL(location.href);
+        const name = url.searchParams.get('name');
+        if (!name) {
+          return;
+        }
+        play(name);
+      }
+      init();
+
+      const channel = createChannel('music');
+
+      channel.addEventListener('message', (e) => {
+        if (e.data.musicName) {
+          play(e.data.musicName);
+        }
+      });
+    </script>
+  </body>
+</html>

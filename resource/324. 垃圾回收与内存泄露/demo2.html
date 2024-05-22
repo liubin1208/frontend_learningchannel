@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function createIncrease() {
+        let count = 0;
+        return function () {
+          return count++;
+        };
+      }
+      let increase = createIncrease();
+      let handler = function () {
+        const n = increase();
+        if (n === 3) {
+          window.removeEventListener('click', handler);
+          handler = null;
+          increase = null;
+          return;
+        }
+        console.log(n);
+      };
+      window.addEventListener('click', handler);
+    </script>
+  </body>
+</html>

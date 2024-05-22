@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .text-select {
+        width: 300px;
+      }
+      .text-select .text {
+        font-size: inherit;
+        width: 100%;
+        border: 1px solid #767676;
+        outline: none;
+      }
+      .text-select .select {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        line-height: 30px;
+        color: #333;
+        border: 1px solid #767676;
+        margin-top: -2px;
+        padding: 0 20px;
+        max-height: 0;
+        transition: 1s;
+      }
+      .text-select .text:focus ~ .select {
+        max-height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-select">
+      <input type="text" class="text" />
+      <div class="select">
+        <span>Lorem, ipsum.</span>
+        <span>Dolore, laborum!</span>
+        <span>Sequi, dicta.</span>
+        <span>Quam, vel!</span>
+        <span>Possimus, inventore.</span>
+      </div>
+    </div>
+  </body>
+</html>

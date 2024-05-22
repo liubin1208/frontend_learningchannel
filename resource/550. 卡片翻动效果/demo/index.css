@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #353535;
+}
+.container {
+  width: 500px;
+  height: 240px;
+  background: linear-gradient(#222, #333, #333, #222);
+  border: 1px solid #111;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  margin-left: -250px;
+  margin-top: -120px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.container::before,
+.container::after {
+  box-sizing: border-box;
+  content: '';
+  border: 1px solid #111;
+  width: 10px;
+  height: 70px;
+  position: absolute;
+  background: linear-gradient(#555, #444, #444, #555);
+  left: -10px;
+  top: 50%;
+  margin-top: -35px;
+  border-radius: 6px 0 0 6px;
+}
+.container::after {
+  right: -10px;
+  left: auto;
+  border-radius: 0 6px 6px 0;
+}
+
+.container h1 {
+  color: #f47321;
+  text-shadow: 1px 1px 0px #000;
+  margin: 20px 0;
+}
+
+.number-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.number {
+  background: linear-gradient(to bottom, #bbb, #eee);
+  color: #333;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 4em;
+  border-radius: 3px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid #fff;
+  position: relative;
+  font-family: 'Arial Rounded MT';
+  perspective: 200px;
+}
+.label {
+  color: #f47321;
+  text-shadow: 1px 1px 0px #000;
+  margin-top: 10px;
+}
+.number::before,
+.number::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #111;
+  left: 0;
+  top: 50%;
+  margin-top: -1px;
+  z-index: 99;
+}
+.number::after {
+  content: '';
+  margin-top: 0;
+  background: #eee;
+}
+
+.cur,
+.next {
+  height: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: all 0.8s;
+}
+
+.bottom {
+  top: 50%;
+}
+.bottom span {
+  margin-top: -50px;
+  display: block;
+}
+
+.cur.top {
+  z-index: 5;
+}
+.cur.bottom {
+  z-index: 1;
+}
+.next.top {
+  z-index: 2;
+}
+.next.bottom {
+  z-index: 4;
+}
+
+.bottom {
+  transform-origin: center top;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(to bottom, #ddd, #eee);
+}
+.top {
+  transform-origin: center bottom;
+  border-radius: 5px 5px 0 0;
+  background: #ccc;
+  background: linear-gradient(to bottom, #ccc, #ddd);
+}
+
+.next.bottom {
+  transform: rotateX(180deg);
+}
+
+.flip .cur.top {
+  transform: rotateX(-180deg);
+}
+.flip .next.bottom {
+  transform: rotateX(0deg);
+}

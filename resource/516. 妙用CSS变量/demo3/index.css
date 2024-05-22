@@ -1,0 +1,50 @@
+.horse {
+  --color-body: #8d5000;
+  --color-muzzle: #ffb380;
+  --color-eyes: #ffffff;
+  --color-teeth: #ffdd55;
+  --color-hoofs: #784421;
+}
+
+article {
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.horse {
+  width: 60%;
+}
+
+.ugly {
+  display: inline-flex;
+  align-self: center;
+  height: 2rem;
+  position: relative;
+}
+
+fieldset {
+  border: 0;
+  padding: 3rem;
+}
+
+label {
+  font: caption;
+  display: inline-block;
+}
+
+input {
+  outline: 0;
+  box-sizing: content-box;
+  margin: 0.5rem;
+}
+
+.var {
+  color: tomato;
+}
+.default {
+  color: orange;
+}
+.fallback {
+  color: yellowgreen;
+}

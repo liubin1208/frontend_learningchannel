@@ -1,0 +1,25 @@
+.card {
+  width: 300px;
+  margin: 0 auto;
+  background: repeating-linear-gradient(
+      -45deg,
+      #e8544d,
+      #e8544d 10px,
+      #fff 10px,
+      #fff 20px,
+      #75adf8 20px,
+      #75adf8 30px,
+      #fff 30px,
+      #fff 40px
+    ) -20px -20px/200% 200%;
+  padding: 5px;
+  transition: 0.5s;
+}
+.container {
+  padding: 10px;
+  /* background: #fff; */
+}
+.card:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  background-position: 0 0;
+}

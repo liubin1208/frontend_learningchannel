@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  position: relative;
+}
+
+.face,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.face {
+  border: 1px solid #ccc;
+}
+.back {
+  background: #3d895480;
+  color: #494b57;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  perspective: 500px;
+}
+.face,
+.back {
+  transition: 0.5s;
+  backface-visibility: hidden;
+}
+.back {
+  transform: rotateY(180deg);
+}
+.card:hover .face {
+  transform: rotateY(-180deg);
+}
+.card:hover .back {
+  transform: rotateY(0);
+}

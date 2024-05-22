@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .pop {
+        background: #409eff;
+        margin: 20px auto;
+        width: 300px;
+        height: 100px;
+        font-size: 2em;
+        line-height: 100px;
+        padding-left: 20px;
+        position: relative;
+        border-radius: 5px;
+        color: #fff;
+        filter: drop-shadow(0 0 10px #000);
+      }
+      .pop::before {
+        content: '';
+        background: #409eff;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        transform: rotate(45deg);
+        left: -10px;
+        top: 50%;
+        margin-top: -10px;
+        /* box-shadow: 0 0 10px #000; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pop">气泡框</div>
+  </body>
+</html>

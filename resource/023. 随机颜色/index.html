@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .ball {
+        position: fixed;
+        border-radius: 50%;
+        opacity: 0.5;
+        animation: move 2s infinite ease-in-out alternate;
+      }
+      @keyframes move {
+        to {
+          transform: translate(var(--disX), var(--disY));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script src="./js/practice.js"></script>
+  </body>
+</html>

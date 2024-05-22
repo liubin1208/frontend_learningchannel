@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input,
+      button {
+        display: block;
+        margin: 1em 0;
+      }
+      .preview {
+        max-width: 300px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="file" />
+    <img class="preview" />
+    <button>点击获取裁剪数据</button>
+    <script>
+      // 实现本地预览
+      const input = document.querySelector('input');
+      const preview = document.querySelector('.preview');
+      const btn = document.querySelector('button');
+      input.onchange = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          preview.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      };
+      // 获取裁剪后的file对象
+      function cut() {
+        const cutInfo = {
+          x: 2000,
+          y: 2000,
+          oWidth: 1000,
+          oHeight: 1000,
+          width: 200,
+          height: 200,
+        };
+        const cvs = document.createElement('canvas');
+        const ctx = cvs.getContext('2d');
+        cvs.width = cutInfo.width;
+        cvs.height = cutInfo.height;
+        ctx.drawImage(
+          preview,
+          cutInfo.x,
+          cutInfo.y,
+          cutInfo.oWidth,
+          cutInfo.oHeight,
+          0,
+          0,
+          cutInfo.width,
+          cutInfo.height
+        );
+        cvs.toBlob((blob) => {
+          const file = new File([blob], 'cut.png', {
+            type: 'image/png',
+          });
+          console.log(file);
+        });
+        // document.body.appendChild(cvs);
+      }
+      btn.onclick = cut;
+    </script>
+  </body>
+</html>

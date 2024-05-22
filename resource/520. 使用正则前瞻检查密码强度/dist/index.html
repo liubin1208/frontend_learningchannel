@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Vue Password Strength</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div id="app">
+      <h2>密码强度检查</h2>
+
+      <div class="input_container">
+        <ul>
+          <li v-bind:class="{ is_valid: contains_eight_characters }">
+            8 个字符以上
+          </li>
+          <li v-bind:class="{ is_valid: contains_number }">必须包含数字</li>
+          <li v-bind:class="{ is_valid: contains_uppercase }">
+            必须包含大写字母
+          </li>
+          <li v-bind:class="{ is_valid: contains_special_character }">
+            必须包含特殊字符
+          </li>
+        </ul>
+
+        <div
+          class="checkmark_container"
+          v-bind:class="{ show_checkmark: valid_password }"
+        >
+          <svg width="50%" height="50%" viewBox="0 0 140 100">
+            <path
+              class="checkmark"
+              v-bind:class="{ checked: valid_password }"
+              d="M10,50 l25,40 l95,-70"
+            />
+          </svg>
+        </div>
+
+        <input
+          type="text"
+          @input="checkPassword"
+          v-model="password"
+          autocomplete="off"
+          placeholder="Password"
+        />
+      </div>
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

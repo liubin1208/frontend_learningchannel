@@ -1,0 +1,121 @@
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  --path: #2f3545;
+  --dot: #5628ee;
+  --duration: 3s;
+  --function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  width: calc(var(--dotSize) * 6);
+  height: calc(var(--dotSize) * 6);
+  margin: calc(var(--dotSize) * 6);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader::after {
+  content: '';
+  width: var(--dotSize);
+  height: var(--dotSize);
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  background-color: var(--dot);
+  top: calc(var(--dotSize) * 6 - (var(--dotSize) / 2));
+  left: calc(var(--dotSize) * 3 - (var(--dotSize) / 2));
+  transform: translate(calc(var(--dotSize) * -3), calc(var(--dotSize) * -3));
+  animation: dot var(--duration) var(--function) infinite;
+}
+
+.loader svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.loader svg rect,
+.loader svg circle {
+  fill: none;
+  stroke: var(--path);
+  stroke-width: 10px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  animation-duration: var(--duration);
+  animation-timing-function: var(--function);
+  animation-iteration-count: infinite;
+}
+
+svg rect {
+  stroke-dasharray: 192 64 192 64;
+  stroke-dashoffset: 0;
+  animation-name: pathRect;
+}
+
+svg circle {
+  stroke-dasharray: 150 50 150 50;
+  stroke-dashoffset: 75;
+  animation-name: pathCircle;
+}
+
+@keyframes dot {
+  25% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(calc(var(--dotSize) * 3), calc(var(--dotSize) * -3));
+  }
+
+  75% {
+    transform: translate(0, calc(var(--dotSize) * -6));
+  }
+
+  100% {
+    transform: translate(calc(var(--dotSize) * -3), calc(var(--dotSize) * -3));
+  }
+}
+
+@keyframes pathRect {
+  25% {
+    stroke-dashoffset: 64;
+  }
+
+  50% {
+    stroke-dashoffset: 128;
+  }
+
+  75% {
+    stroke-dashoffset: 192;
+  }
+
+  100% {
+    stroke-dashoffset: 256;
+  }
+}
+
+@keyframes pathCircle {
+  25% {
+    stroke-dashoffset: 125;
+  }
+
+  50% {
+    stroke-dashoffset: 175;
+  }
+
+  75% {
+    stroke-dashoffset: 225;
+  }
+
+  100% {
+    stroke-dashoffset: 275;
+  }
+}

@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #23262d;
+}
+.container {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: grid;
+  --c1: 1fr;
+  --c2: 1fr;
+  --c3: 1fr;
+  --r1: 1fr;
+  --r2: 1fr;
+  --r3: 1fr;
+  grid-template-columns: var(--c1) var(--c2) var(--c3);
+  grid-template-rows: var(--r1) var(--r2) var(--r3);
+  transition: 0.5s;
+  grid-gap: 10px;
+}
+
+@for $i from 0 to 9 {
+  .item:nth-child(#{$i + 1}) {
+    background: hsl($i * 40%, 100%, 64%);
+  }
+  .container:has(.item:nth-child(#{$i + 1}):hover) {
+    $r: floor($i / 3) + 1;
+    $c: $i % 3 + 1;
+    --r#{$r}: 2fr;
+    --c#{$c}: 2fr;
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 180px;
+        height: 80px;
+        background: #000;
+        border: none;
+        outline: none;
+        display: block;
+        margin: 0 auto;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 15px 0;
+        position: relative;
+        transform: skew(-30deg);
+      }
+
+      button::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(
+          circle at 0 0,
+          transparent,
+          transparent 20px,
+          #000 20px
+        );
+        bottom: 0;
+        left: -20px;
+      }
+      button::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(
+          circle at 100% 100%,
+          transparent,
+          transparent 20px,
+          #000 20px
+        );
+        top: 0;
+        right: -20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>倾斜按钮</button>
+  </body>
+</html>

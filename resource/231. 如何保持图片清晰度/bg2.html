@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        width: 500px;
+        margin: 0 auto;
+        height: 313px;
+      }
+      .container {
+        background: -webkit-image-set(
+            url(./imgs/spring@500.jpeg) 1x,
+            url(./imgs/spring@1000.jpeg) 2x,
+            url(./imgs/spring@2000.jpeg) 4x,
+            url(./imgs/spring@3000.jpeg) 6x
+          )
+          no-repeat;
+        background-size: 100% auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+</html>

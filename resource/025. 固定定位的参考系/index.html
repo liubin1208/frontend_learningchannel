@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .block {
+        width: 400px;
+        padding: 30px 0;
+        border: 5px solid #000;
+        margin: 0 auto;
+        transition: 0.5s;
+        margin-top: 30px;
+      }
+      .block button {
+        width: 300px;
+        margin: 0 auto;
+        display: block;
+        height: 60px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #409eff;
+        color: #fff;
+        transition: 0.2s;
+      }
+      .block:hover {
+        transform: scale(1.1);
+      }
+      .block button:hover {
+        background: #66b1ff;
+      }
+      .msg {
+        position: fixed;
+        background: lightblue;
+        padding: 20px 30px;
+        border-radius: 5px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        filter: drop-shadow(0 0 5px #00000050);
+        display: none;
+      }
+      .close {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: #f40;
+        border-radius: 50%;
+        font-family: consolas;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        line-height: 30px;
+        right: -15px;
+        top: -15px;
+        cursor: pointer;
+        border: 2px solid #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block">
+      <button>点击弹窗</button>
+    </div>
+    <div class="msg">
+      <span>提示框</span>
+      <span class="close">X</span>
+    </div>
+
+    <script>
+      const $ = document.querySelector.bind(document);
+      const btn = $('button'),
+        msg = $('.msg'),
+        close = $('.close');
+      const openMsg = () => {
+        msg.style.display = 'block';
+      };
+      const closeMsg = () => {
+        msg.style.display = 'none';
+      };
+      btn.addEventListener('click', openMsg);
+      close.addEventListener('click', closeMsg);
+    </script>
+  </body>
+</html>
