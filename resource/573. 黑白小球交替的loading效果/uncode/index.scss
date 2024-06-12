@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #66c7f4;
+}
+$ballSize: 10px; // 小球尺寸
+$containerSize: 150px; // 容器尺寸
+.loading {
+  width: $containerSize;
+  height: $containerSize;
+  border: 1px solid #fff;
+  margin: 50px auto;
+  position: relative;
+  border-radius: 50%;
+  .dot {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: $ballSize;
+    height: $ballSize;
+    margin-left: -$ballSize / 2;
+    margin-top: -$ballSize / 2;
+    background: #f40;
+  }
+}

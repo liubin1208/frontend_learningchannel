@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>打开文件夹</button>
+    <script>
+      const btn = document.querySelector('button');
+      btn.onclick = async function () {
+        const handle = await showDirectoryPicker();
+        await processHandle(handle);
+        const fileHandle = handle.children[2];
+        const file = await fileHandle.getFile();
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          console.log(e.target.result);
+        };
+        reader.readAsText(file);
+      };
+
+      async function processHandle(handle) {
+        if (handle.kind === 'file') {
+          return;
+        }
+        const iter = await handle.entries();
+        handle.children = [];
+        for await (const entry of iter) {
+          const subHandler = entry[1];
+          handle.children.push(subHandler);
+          processHandle(subHandler);
+        }
+      }
+    </script>
+  </body>
+</html>

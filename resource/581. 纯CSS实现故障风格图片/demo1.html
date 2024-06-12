@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .mix {
+        width: 636px;
+        height: 480px;
+        background: url(./ikun.gif) #0ff;
+        background-blend-mode: lighten;
+        position: relative;
+      }
+      .mix::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        margin-left: 15px;
+        background: url(./ikun.gif) #f40;
+        background-blend-mode: lighten;
+        mix-blend-mode: darken;
+        animation: shaken 30ms infinite;
+      }
+      @keyframes shaken {
+        to {
+          transform: translateX(10px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mix"></div>
+  </body>
+</html>

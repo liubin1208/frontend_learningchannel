@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #66c7f4;
+}
+
+.loading {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #fff;
+  margin: 50px auto;
+  position: relative;
+  border-radius: 50%;
+}
+.loading .dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  margin-top: -5px;
+  background: #f40;
+}

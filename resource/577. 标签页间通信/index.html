@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音乐列表</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="music-list">
+      <div class="music-item">
+        <span class="title">最后之战</span>
+        <i data-name="最后之战.ogg" class="iconfont i-24gf-play"></i>
+      </div>
+      <div class="music-item">
+        <span class="title">Escape</span>
+        <i data-name="Escape.ogg" class="iconfont i-24gf-play"></i>
+      </div>
+      <div class="music-item">
+        <span class="title">To Take To Hold</span>
+        <i data-name="To Take To Hold.mp3" class="iconfont i-24gf-play"></i>
+      </div>
+    </div>
+
+    <script>
+      const btns = document.querySelectorAll('.music-item i');
+      const channel = new BroadcastChannel('music');
+      for (const btn of btns) {
+        btn.onclick = function () {
+          const name = this.dataset.name;
+          if (标签页不存在) {
+            window.open(`./music.html?name=${name}`, 'music');
+          } else {
+            channel.postMessage(name);
+          }
+        };
+      }
+    </script>
+  </body>
+</html>
